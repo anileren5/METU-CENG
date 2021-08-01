@@ -1,0 +1,5 @@
+Fastest lap of driver0 is:3
+Fastest lap of driver1 is:3
+Fastest lap of driver2 is:2
+Fastest lap of driver3 is:0
+Fastest lap of driver4 is:0

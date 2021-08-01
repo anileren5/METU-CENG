@@ -1,0 +1,135 @@
+Diff between driver0 and driver1:
+-13.76 -49.27 20.37 144.12 147.67 44.17 57.20 
+
+Diff between driver0 and driver2:
+12.99 55.03 154.12 152.40 188.50 182.66 164.14 
+
+Diff between driver0 and driver3:
+-52.38 -80.34 -19.65 40.56 41.56 -56.99 -103.58 
+
+Diff between driver0 and driver4:
+85.91 102.96 165.57 212.71 221.58 219.07 241.18 
+
+Diff between driver0 and driver5:
+4.26 19.79 75.41 115.85 109.64 37.33 38.44 
+
+Diff between driver0 and driver6:
+34.06 38.05 118.32 120.17 180.95 134.43 107.48 
+
+Diff between driver0 and driver7:
+-52.65 -11.46 33.81 117.20 128.09 75.29 102.81 
+
+Diff between driver0 and driver8:
+33.83 -22.13 26.22 128.78 102.65 53.73 41.26 
+
+Diff between driver0 and driver9:
+-54.25 -120.55 -54.35 32.68 57.06 1.81 -4.02 
+
+Diff between driver1 and driver2:
+26.75 104.30 133.75 8.28 40.83 138.49 106.94 
+
+Diff between driver1 and driver3:
+-38.62 -31.07 -40.02 -103.56 -106.11 -101.16 -160.78 
+
+Diff between driver1 and driver4:
+99.67 152.23 145.20 68.59 73.91 174.90 183.98 
+
+Diff between driver1 and driver5:
+18.02 69.06 55.04 -28.27 -38.03 -6.84 -18.76 
+
+Diff between driver1 and driver6:
+47.82 87.32 97.95 -23.95 33.28 90.26 50.28 
+
+Diff between driver1 and driver7:
+-38.89 37.81 13.44 -26.92 -19.58 31.12 45.61 
+
+Diff between driver1 and driver8:
+47.59 27.14 5.85 -15.34 -45.02 9.56 -15.94 
+
+Diff between driver1 and driver9:
+-40.49 -71.28 -74.72 -111.44 -90.61 -42.36 -61.22 
+
+Diff between driver2 and driver3:
+-65.37 -135.37 -173.77 -111.84 -146.94 -239.65 -267.72 
+
+Diff between driver2 and driver4:
+72.92 47.93 11.45 60.31 33.08 36.41 77.04 
+
+Diff between driver2 and driver5:
+-8.73 -35.24 -78.71 -36.55 -78.86 -145.33 -125.70 
+
+Diff between driver2 and driver6:
+21.07 -16.98 -35.80 -32.23 -7.55 -48.23 -56.66 
+
+Diff between driver2 and driver7:
+-65.64 -66.49 -120.31 -35.20 -60.41 -107.37 -61.33 
+
+Diff between driver2 and driver8:
+20.84 -77.16 -127.90 -23.62 -85.85 -128.93 -122.88 
+
+Diff between driver2 and driver9:
+-67.24 -175.58 -208.47 -119.72 -131.44 -180.85 -168.16 
+
+Diff between driver3 and driver4:
+138.29 183.30 185.22 172.15 180.02 276.06 344.76 
+
+Diff between driver3 and driver5:
+56.64 100.13 95.06 75.29 68.08 94.32 142.02 
+
+Diff between driver3 and driver6:
+86.44 118.39 137.97 79.61 139.39 191.42 211.06 
+
+Diff between driver3 and driver7:
+-0.27 68.88 53.46 76.64 86.53 132.28 206.39 
+
+Diff between driver3 and driver8:
+86.21 58.21 45.87 88.22 61.09 110.72 144.84 
+
+Diff between driver3 and driver9:
+-1.87 -40.21 -34.70 -7.88 15.50 58.80 99.56 
+
+Diff between driver4 and driver5:
+-81.65 -83.17 -90.16 -96.86 -111.94 -181.74 -202.74 
+
+Diff between driver4 and driver6:
+-51.85 -64.91 -47.25 -92.54 -40.63 -84.64 -133.70 
+
+Diff between driver4 and driver7:
+-138.56 -114.42 -131.76 -95.51 -93.49 -143.78 -138.37 
+
+Diff between driver4 and driver8:
+-52.08 -125.09 -139.35 -83.93 -118.93 -165.34 -199.92 
+
+Diff between driver4 and driver9:
+-140.16 -223.51 -219.92 -180.03 -164.52 -217.26 -245.20 
+
+Diff between driver5 and driver6:
+29.80 18.26 42.91 4.32 71.31 97.10 69.04 
+
+Diff between driver5 and driver7:
+-56.91 -31.25 -41.60 1.35 18.45 37.96 64.37 
+
+Diff between driver5 and driver8:
+29.57 -41.92 -49.19 12.93 -6.99 16.40 2.82 
+
+Diff between driver5 and driver9:
+-58.51 -140.34 -129.76 -83.17 -52.58 -35.52 -42.46 
+
+Diff between driver6 and driver7:
+-86.71 -49.51 -84.51 -2.97 -52.86 -59.14 -4.67 
+
+Diff between driver6 and driver8:
+-0.23 -60.18 -92.10 8.61 -78.30 -80.70 -66.22 
+
+Diff between driver6 and driver9:
+-88.31 -158.60 -172.67 -87.49 -123.89 -132.62 -111.50 
+
+Diff between driver7 and driver8:
+86.48 -10.67 -7.59 11.58 -25.44 -21.56 -61.55 
+
+Diff between driver7 and driver9:
+-1.60 -109.09 -88.16 -84.52 -71.03 -73.48 -106.83 
+
+Diff between driver8 and driver9:
+-88.08 -98.42 -80.57 -96.10 -45.59 -51.92 -45.28 
+

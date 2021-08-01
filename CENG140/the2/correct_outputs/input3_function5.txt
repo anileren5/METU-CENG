@@ -1,0 +1,10 @@
+Fastest lap of driver0 is:5
+Fastest lap of driver1 is:3
+Fastest lap of driver2 is:1
+Fastest lap of driver3 is:3
+Fastest lap of driver4 is:0
+Fastest lap of driver5 is:1
+Fastest lap of driver6 is:4
+Fastest lap of driver7 is:1
+Fastest lap of driver8 is:3
+Fastest lap of driver9 is:3

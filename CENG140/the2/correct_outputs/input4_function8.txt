@@ -1,0 +1,30 @@
+Diff between driver0 and driver1:
+7.21 -7.60 -11.16 -6.97 -59.83 
+
+Diff between driver0 and driver2:
+-18.01 -59.44 -56.85 -63.03 -77.77 
+
+Diff between driver0 and driver3:
+20.87 -24.84 -30.84 -56.22 -69.96 
+
+Diff between driver0 and driver4:
+12.76 -6.46 -48.34 -77.61 -117.85 
+
+Diff between driver1 and driver2:
+-25.22 -51.84 -45.69 -56.06 -17.94 
+
+Diff between driver1 and driver3:
+13.66 -17.24 -19.68 -49.25 -10.13 
+
+Diff between driver1 and driver4:
+5.55 1.14 -37.18 -70.64 -58.02 
+
+Diff between driver2 and driver3:
+38.88 34.60 26.01 6.81 7.81 
+
+Diff between driver2 and driver4:
+30.77 52.98 8.51 -14.58 -40.08 
+
+Diff between driver3 and driver4:
+-8.11 18.38 -17.50 -21.39 -47.89 
+
