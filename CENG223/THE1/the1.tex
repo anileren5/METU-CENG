@@ -1,0 +1,324 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[dvips]{graphicx}
+\usepackage{fancybox}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{latexsym}
+\usepackage{alltt}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tikz}
+\usepackage{fitch}  % to use fitch
+\usepackage{float}
+\usepackage[hmargin=3cm,vmargin=5.0cm]{geometry}
+\documentclass{article}  
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name : Anıl Eren Göçer\\
+Id Number : 2448397 \\
+
+\section*{Question 1}
+I am asked to prove the following logical equivalence.
+\begin{equation*}
+    \neg(p \wedge q) \leftrightarrow (\neg q \rightarrow p) \equiv (p \vee q) \wedge (\neg p \vee \neg q) 
+\end{equation*}
+Let's define the equivalence $ p \to q \equiv \neg p \vee q $ as \textbf{identity1}. \\
+Let's also define the equivalence $ p \leftrightarrow q \equiv (p\to q) \wedge (q \to p) $ as \textbf{identity2}.
+
+
+\noindent
+\\\textbf{Steps and Justifications} \\\\
+\begin{proof}
+\fitchline{$\neg (p \wedge q) \leftrightarrow (\neg q \rightarrow p)$}{\textbf{LHS of the equivalence}}
+\fitchline{$\equiv (\neg p \vee \neg q) \leftrightarrow (\neg q \to p)$}{By the first De Morgan law}
+\fitchline{$\equiv (\neg p \vee \neg q) \leftrightarrow (\neg(\neg q) \vee p)$}{Using \textbf{identity1}}
+\fitchline{$\equiv (\neg p \vee \neg q) \leftrightarrow (q \vee p)$}{By the double negation law}
+\fitchline{$\equiv [(\neg p \vee \neg q) \rightarrow (q \vee p)] \wedge [(q \vee p) \rightarrow (\neg p \vee \neg q)]$}{Using \textbf{identity2}}
+\fitchline{$\equiv [\neg(\neg p \vee \neg q) \vee (q \vee p)] \wedge [(q \vee p) \rightarrow (\neg p \vee \neg q)]$}{Using \textbf{identity1}}
+\fitchline{$\equiv [\neg(\neg p \vee \neg q) \vee (q \vee p)] \wedge [\neg(q \vee p) \vee (\neg p \vee \neg q)]$}{Using \textbf{identity1}}
+\fitchline{$\equiv [(\neg(\neg p) \wedge \neg(\neg q)) \vee (q \vee p)] \wedge [(\neg q \wedge \neg p) \vee (\neg p \vee \neg q)] $}{By the second De Morgan law}
+\fitchline{$\equiv [(p \wedge q) \vee (q \vee p)] \wedge [(\neg q \wedge \neg p) \vee (\neg p \vee \neg q)] $}{By the double negation law}
+\fitchline{$\equiv [((p \wedge q) \vee q) \vee ((p \wedge q) \vee p)] \wedge [(\neg q \wedge \neg p) \vee (\neg p \vee \neg q)]$}{Distributive laws}
+\fitchline{$\equiv [((p \wedge q) \vee q) \vee ((p \wedge q) \vee p)] \wedge [((\neg q \wedge \neg p) \vee \neg p) \vee ((\neg q \wedge \neg p) \vee \neg q)]$}{Distributive laws}
+\fitchline{$\equiv [(q \vee (p \wedge q)) \vee (p \vee (p \wedge q))] \wedge [(\neg p \vee (\neg q \wedge \neg p)) \vee (\neg q \vee (\neg q \wedge \neg p))]$}{Commutative laws}
+\fitchline{$\equiv [(q \vee (q \wedge p)) \vee (p \vee (p \wedge q))] \wedge [(\neg p \vee (\neg p \wedge \neg q)) \vee (\neg q \vee (\neg q \wedge \neg p))]$}{Commutative laws}
+\fitchline{$\equiv [q \vee (p \vee (p \wedge q))] \wedge [(\neg p \vee (\neg p \wedge \neg q)) \vee (\neg q \vee (\neg q \wedge \neg p))]$}{Absorption laws}
+\fitchline{$\equiv [q \vee p] \wedge [(\neg p \vee (\neg p \wedge \neg q)) \vee (\neg q \vee (\neg q \wedge \neg p))]$}{Absorption laws}
+\fitchline{$\equiv [q \vee p] \wedge [\neg p \vee (\neg q \vee (\neg q \wedge \neg p))]$}{Absorption laws}
+\fitchline{$\equiv [q \vee p] \wedge [\neg p \vee \neg q]$}{Absorption laws}
+\fitchline{$\equiv (p \vee q) \wedge (\neg p \vee \neg q)$}{Commutative laws}
+\end{proof}
+\\\\
+I have obtained RHS of the equivalence at the end. Hence, we have prove that $\neg (p \wedge q) \leftrightarrow (\neg q \rightarrow p)$ is logically equivalent to $(p \vee q) \wedge (\neg p \vee \neg q)$ .
+
+\newpage
+\section*{Question 2}
+I(x; y): x is an intern in faculty y.\\
+E(x; y): x has employee id number y.\\
+S(x; y): x is supervised by y.\\
+A(x; y): x is admitted to job position y.\\
+J(x; y): x is a job position in faculty y.\\
+
+\noindent
+\textbf{a.} Two different interns in the same faculty cannot have the same employee id number.\\\\
+\textbf{Answer a:} \\
+\begin{center}
+    $\forall x \forall y \forall z \forall w ([(x\neq y)\wedge I(x,z) \wedge I(y,z) \wedge E(x,w)] \rightarrow \neg E(y,w))$ \\
+\end{center}
+where the domain of discourse for x,y is all people,the domain of discourse for z is all faculties and, the domain of discourse for w is all id numbers.
+\\\\\\\\
+\textbf{b.} There are some interns in all faculties who are supervised by no one but themselves. \\\\
+\textbf{Answer b:} \\
+\begin{center}
+    $\forall x \exists y \forall z [I(y,x) \wedge S(y,y) \wedge (S(y,z) \rightarrow (z=y))]$
+\end{center}
+where the domain of discourse for x is all faculties, the domain of discourse for y and z is all people.
+\\\\\\\\
+\textbf{c.} At most two interns can be admitted to each job position in the medicine faculty. \\\\
+\textbf{Answer c:} \\
+\begin{center}
+    $\forall x \forall y \forall z \forall w [((x \neq y) \wedge (x \neq z) \wedge (y \neq z) \wedge I(x,medicine) \wedge I(y,medicine) \wedge
+    I(z,medicine) \wedge J(w,medicine) \wedge A(x,w) \wedge A(y,w)) \rightarrow \neg A(z,w)]$
+\end{center}
+where the domain of discourse for x,y and z is all people, the domain of discourse for w is all job positions.
+
+\newpage
+\section*{Lemmas}
+In the following questions, I am going to use use several lemmas which I will prove first here. \\
+\begin{center}
+\begin{fitchproof}
+\fitchline{$\neg p \wedge \neg q$}{\textit{premise}} \\
+\fitchline{$\neg p$}{$\wedge e,1$} \\
+\fitchline{$\neg q$}{$\wedge e,1$} \\
+\subproof{
+    \fitchline{$p\vee q$}{assumption} \\
+    \subproof{
+        \fitchline{p}{assumption}\\
+        \fitchline{$\bot$}{$\neg e,2,5$} \\
+    }
+    \fitchline{$p \rightarrow \bot $}{$\rightarrow i,5-6$} \\
+    \subproof{
+    \fitchline{q}{assumption} \\
+    \fitchline{$\bot$}{$\neg e,3,8$} \\
+    }
+    \fitchline{$q \rightarrow \bot$}{$\rightarrow i,8-9$} \\
+    \fitchline{$\bot$}{$\vee e,4,7,10$} \\
+}
+\fitchline{$\neg(p\vee q)$}{$\neg i ,4-11$}
+
+\end{fitchproof}
+\end{center}
+\caption{Table 1:De Morgan's Law: $\neg p \wedge \neg q \vdash \neg (p \vee q).$ This law will be refferred as \textbf{DM}}
+\\\\\\\\
+\begin{center}
+\begin{fitchproof}
+\fitchline{$p \vee q$}{\textit{premise}} \\
+\fitchline{$\neg q$}{\textit{premise}} \\
+\subproof{
+    \fitchline{$\neg p$}{\textit{assumption}} \\
+    \fitchline{$\neg p \wedge \neg q$}{$\wedge i,2,3$} \\ 
+    \fitchline{$\neg(p \vee q)$}{\textbf{DM},4} \\
+    \fitchline{$\bot$}{$\neg e,1,5$} \\
+}
+\fitchline{$\neg \neg p$}{$\neg i,3-6$}\\
+\fitchline{p}{$\neg \neg e,7$}
+\end{fitchproof}
+\end{center}
+\caption{Table 2: Lemma: $p \vee q,\neg q \vdash p.$} I will refer this lemma as \textbf{Göçer's Rule}.
+
+\newpage
+\begin{center}
+\begin{fitchproof}
+\fitchline{$\neg (p \rightarrow q)$}{premise} 
+\subproof{
+    \fitchline{$\neg (p \wedge \neg q)$}{assumption}
+    \subproof{
+        \fitchline{p}{assumption}
+        \subproof{
+            \fitchline{$\neg q$}{assumption} \\
+            \fitchline{$p \wedge \neg q$}{$\wedge i,3,4$}\\
+            \fitchline{$\bot$}{$\neg e,2,5$} \\
+        }
+        \fitchline{$\neg \neg q$}{$\neg i,4-6$} \\
+        \fitchline{q}{$\neg \neg e ,7$} \\
+    }
+    \fitchline{$p \rightarrow q$}{$\rightarrow i,3-8$} \\
+    \fitchline{$\bot$}{$\neg e 1,9$} 
+}
+\fitchline{$\neg \neg (p \wedge q)$}{$\rightarrow i,2-10$} \\
+\fitchline{$p \wedge \neg q$}{$\neg \neg e ,11$}
+\end{fitchproof}
+\end{center}
+\caption{Table 3: Lemma:$\neg (p\rightarrow q) \vdash p \wedge \neg q.$} This lemma will be referred as \textbf{Beautiful Rule}.
+\\\\\\\\
+\begin{center}
+\begin{fitchproof}
+\fitchline{$\exists x \neg P(x)$}{premise}
+\subproof{
+    \fitchline{$\forall x P(x)$}{assumption}
+    \subproof{
+        \fitchline{$\neg P(a)$}{assumption} \\
+        \fitchline{P(a)}{$\forall e,2$} \\
+        \fitchline{$\bot$}{$\neg e,3,4$}
+    }
+    \fitchline{$\bot$}{$\exists e,1,3-5$}
+}
+\fitchline{$\neg \forall x P(x)$}{$\neg i,2-6$}
+\end{fitchproof}
+\end{center}
+\caption{Table 4: Lemma: $\exists x \neg P(x) \vdash \neg \forall x P(x).$} This lemma will be referred as \textbf{Ankara's Rule}.
+
+\newpage
+\begin{center}
+\begin{fitchproof}
+\fitchline{$\forall x \neg P(x)$}{premise}
+\subproof{
+    \fitchline{$\exists  x P(x)$}{assumption}
+    \subproof{
+        \fitchline{P(a)}{assumption} \\
+        \fitchline{$\neg P(a)$}{$\forall e,2$} \\
+        \fitchline{$\bot$}{$\neg e,3,4$}
+    }
+    \fitchline{$\bot$}{$\exists e,2,3-5$}
+}
+\fitchline{$\neg \exists  x P(x)$}{$\neg i,2-6$}
+\end{fitchproof}
+\end{center}
+\caption{Table 5: Lemma: $\forall x \neg P(x) \vdash \neg \exists x P(x).$ This lemma will
+be refferred as \textbf{METU's Rule} \\\\\\\\}
+
+
+\begin{center}
+\begin{fitchproof}
+\fitchline{$p \rightarrow q$}{Premise} \\
+\fitchline{$\neg q$}{Premise}
+\subproof{
+\fitchline{p}{Assumption} \\
+\fitchline{q}{$\rightarrow e,1,3$} \\
+\fitchline{$\bot$}{$\neg e,2,4$}
+}
+\fitchline{$\neg p$}{$\neg i,3-5$}
+\end{fitchproof}
+\end{center}
+\caption{Table6: Lemma: $p \rightarrow q,\neg q \vdash \neg p.$ This lemma will be refferred as \textbf{Modus Tollens}.}
+
+
+
+
+
+
+
+
+\newpage
+\section*{Question 3}
+\textbf{a.} $p \vee \neg q,p \vee r \vdash (r \rightarrow q) \rightarrow p.$ \\
+\begin{center}
+\begin{fitchproof}
+\fitchline{$p \vee \neg q$}{premise} \\
+\fitchline{$p \vee r$}{premise} \\
+\subproof{
+    \fitchline{$r \rightarrow q$}{assumption} \\
+    \subproof{
+        \fitchline{$\neg p$}{assumption} \\
+        \fitchline{$\neg q$}{\textbf{Göçer's Rule} 1,4} \\
+        \fitchline{r}{\textbf{Göçer's Rule} 2,4} \\
+        \fitchline{q}{$\rightarrow e,3,6$} \\
+        \fitchline{$\bot$}{$\neg e,5,7$} \\
+    }
+    \fitchline{$\neg \neg p$}{$\neg i,4-8$} \\
+    \fitchline{p}{$\neg \neg e,9$} \\
+}
+\fitchline{$(r \rightarrow q) \rightarrow p$}{$\rightarrow i,3-10$}
+\end{fitchproof}
+\end{center}
+
+\textbf{\\\\\\\\b.} $\vdash ((q \rightarrow p) \rightarrow q) \rightarrow q.$ \\
+\begin{center}
+\begin{fitchproof}
+\subproof{
+    \fitchline{$((q \rightarrow p) \rightarrow q)$}{assumption}
+    \subproof{
+        \fitchline{$\neg q$}{assumption} \\
+        \fitchline{$\neg (q \rightarrow p)$}{\textbf{Modus Tollens},1,2} \\
+        \fitchline{$q \wedge \neg p$}{\textbf{Beautiful Rule},3} \\
+        \fitchline{q}{$\wedge e,4$} \\
+        \fitchline{$\bot$}{$\neg e ,2,5$}
+    }
+    \fitchline{$\neg \neg q$}{$\neg i,2,6$} \\
+    \fitchline{q}{$\neg \neg e,7$}
+}
+\fitchline{$((q \rightarrow p) \rightarrow q) \rightarrow q$}{$\rightarrow i,1-8$}
+\end{fitchproof}
+\end{center}
+
+
+
+
+\newpage 
+\section*{Question 4}
+\textbf{a.} $\neg \forall x (P(x) \rightarrow Q(x)) \vdash \exists x (P(x) \wedge \neg Q(x)).$ \\
+\noindent
+\begin{center}
+\begin{fitchproof}
+\fitchline{$\neg \forall x (P(x) \rightarrow Q(x))$}{\textit{premise}} \\
+\fitchline{$\neg (P(x_0) \rightarrow Q(x_0)) $}{\textit{$\forall x e ,1$}} \\
+\subproof{
+    \fitchline{$\neg (P(x_0) \wedge \neg Q(x_0))$}{\textit{assumption}}
+    \subproof{
+        \fitchline{$P(x_0)$}{\textit{assumption}} \\
+        \subproof{
+            \fitchline{$\neg Q(x_0)$}{\textit{assumption}} \\
+            \fitchline{$P(x_0) \wedge \neg Q(x_0)$}{$\land i ,4,5$} \\
+            \fitchline{\bot}{$\neg e ,3,6$}
+        }
+        \fitchline{$\neg \neg Q(x_0)$}{$\neg i ,5-7$} \\
+        \fitchline{$Q(x_0)$}{$\neg \neg e ,8$}
+    }
+    \fitchline{$P(x_0) \rightarrow Q(x_0)$}{$\rightarrow i,4-9$} \\
+    \fitchline{\bot}{$\neg e,2,10$}
+}
+\fitchline{$\neg \neg (P(x_0) \wedge \neg Q(x_0))$}{$\neg i ,3-11$} \\
+\fitchline{$P(x_0) \wedge \neg Q(x_0)$}{$\neg \neg e,12$} \\
+\fitchline{$\exists x (P(x) \wedge \neg Q(x))$}{$\exists x i ,13$}
+\end{fitchproof}    
+\end{center}
+
+\textbf{\\\\\\b.} $\forall x \forall y (P(x,y) \rightarrow \neg P(y,x)),  \forall x \exists y P(x,y) \vdash \neg \exists v \forall z P(z,v).$
+
+\begin{center}
+\begin{fitchproof}
+\fitchline{$\forall x \forall y (P(x,y) \rightarrow \neg P(y,x))$)}{premise} \\
+\fitchline{$\forall x \exists y P(x,y)$}{premise} \\
+\fitchline{a}{} \\
+\fitchline{$\exists y P(a,y)$}{$\forall e,2$}
+\subproof{
+    \fitchline{b,$P(a,b)$}{assumption} \\
+    \fitchline{$P(a,b) \rightarrow \neg P(b,a)$}{$\forall \forall e,1$} \\
+    \fitchline{$\neg P(b,a)$}{$\rightarrow e,5,6$} \\
+    \fitchline{$\exists y \neg P(y,a)$}{$\exists i,6$}
+}
+\fitchline{$\forall x \exists y \neg P(y,x)$}{$\forall xi,3,4-7$} \\
+\fitchline{$\forall v \exists z \neg P(z,v)$}{the same as 9} \\
+\fitchline{$\forall v \neg \forall z P(z,v)$}{\textbf{Ankara's Rule,10}} \\
+\fitchline{$\neg \exists v \forall z P(z,v)$}{\textbf{METU's Rule,11}}
+\end{fitchproof}
+\end{center}
+
+\end{document}
+
