@@ -311,9 +311,9 @@ module testbench_ic1337;
       	if (Q0 == 1'b0 && Z == 1'b1 && Q1 == 1'b1) $display("Case I0=0 I1=0 I2=0 Q0prev=0 Q1prev=0 is correct!");
       	else $display("Case I0=0 I1=0 I2=0 Q0prev=0  Q1prev=0 is wrong!");     
       
-      	#1; // 418 
+      	#1; // 448 
         I0 = 1'b1; I1 = 1'b1; I2 = 1'b1;
-        #9; // 427
+        #9; // 457
       	if (Q0 == 1'b1 && Z == 1'b0 && Q1 == 1'b1) $display("Case I0=1 I1=1 I2=1 Q0prev=0 Q1prev=1 is correct!");
       	else $display("Case I0=1 I1=1 I2=1 Q0prev=0  Q1prev=1 is wrong!"); 
       
