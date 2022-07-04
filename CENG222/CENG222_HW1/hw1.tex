@@ -1,0 +1,289 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[dvips]{graphicx}
+\usepackage{fancybox}
+\usepackage{verbatim}
+\usepackage{array}
+\usepackage{latexsym}
+\usepackage{alltt}
+\usepackage{hyperref}
+\usepackage{textcomp}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usepackage{fitch}  % to use fitch
+\usepackage{float}
+\usepackage[hmargin=3cm,vmargin=5.0cm]{geometry}
+%\topmargin=0cm
+\topmargin=-2cm
+\addtolength{\textheight}{6.5cm}
+\addtolength{\textwidth}{2.0cm}
+%\setlength{\leftmargin}{-5cm}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+
+\begin{document}
+
+\section*{Student Information } 
+%Write your full name and id number between the colon and newline
+%Put one empty space character after colon and before newline
+Full Name :  Anıl Eren Göçer \\
+Id Number :  2448397 \\
+
+\section*{Answer 1} 
+BOX 1: 2 White and 8 Black \\
+BOX 2: 4 White and 11 Black \\
+BOX 3: 3 White and 9 Black \\
+
+
+\section*{a)}
+\textbf{By Complement Rule}; \\ \\ 
+P\{At least one of them is white.\} = 1 - P\{None of them is white.\} = 1 - P\{All of them are black.\} \\  \\
+= 1 - (\dfrac{8}{10}).(\dfrac{11}{15}).(\dfrac{9}{12}) = 1 - \dfrac{792}{1800} = \dfrac{1008}{1800} = 0.56 \\ \\
+Answer = \textbf{0.56}
+
+
+\section*{b)}
+P\{All of the three balls drawn are white.\} = (\dfrac{2}{10}).(\dfrac{4}{15}).(\dfrac{3}{12}) = \dfrac{24}{1800} = 0.133333 \\ \\
+Answer = \textbf{0.133333}
+
+\section*{c)}
+If I draw two balls from the, \\ \\
+
+\textbf{BOX 1:} P\{get two white balls\} = (\dfrac{2}{10}).(\dfrac{1}{9}) = \dfrac{2}{90} = 0.022222 \\ \\ 
+
+\textbf{BOX 2:} P\{get two white balls\} = (\dfrac{4}{15}).(\dfrac{3}{14}) = \dfrac{12}{210} = 0.05714 \\ \\ 
+
+\textbf{BOX 3:} P\{get two white balls\} = (\dfrac{3}{12}).(\dfrac{2}{11}) = \dfrac{10}{132} = 0.04545 \\ \\ 
+
+\noindent As seen above, probability of getting two white balls is highest in the case I draw from the \textbf{BOX 2}, since 0.05714 $>$ 0.04545 $>$ 0.022222. \\
+Hence, I would draw from \textbf{BOX 2}. \\ \\
+Answer = \textbf{BOX 2} \newpage
+
+
+\section*{d)}
+If I first draw from the \textbf{BOX 1} and then again from \textbf{BOX 1}: \space
+P = (\dfrac{2}{10}).(\dfrac{1}{9}) = \dfrac{2}{90} = 0.022222 \\ \\
+
+\noindent If I first draw from the \textbf{BOX 1} and then from \textbf{BOX 2}: \space
+P = (\dfrac{2}{10}).(\dfrac{4}{15}) = \dfrac{8}{150} = 0.053333 \\ \\
+
+\noindent If I first draw from the \textbf{BOX 1} and then from \textbf{BOX 3}: \space
+P = (\dfrac{2}{10}).(\dfrac{3}{12}) = \dfrac{6}{120} = 0.05 \\ \\  \\
+
+\noindent If I first draw from the \textbf{BOX 2} and then from \textbf{BOX 1}: \space
+P = (\dfrac{4}{15}).(\dfrac{2}{10}) = \dfrac{8}{150} = 0.053333 \\ \\
+
+\noindent If I first draw from the \textbf{BOX 2} and then again from \textbf{BOX 2}: \space
+P = (\dfrac{4}{15}).(\dfrac{3}{14}) = \dfrac{12}{210} = 0.05714 \\ \\
+
+\noindent If I first draw from the \textbf{BOX 2} and then from \textbf{BOX 3}: \space
+P = (\dfrac{4}{15}).(\dfrac{3}{12}) = \dfrac{12}{180} = 0.066667 \\ \\ \\
+
+\noindent If I first draw from the \textbf{BOX 3} and then from \textbf{BOX 1}: \space
+P = (\dfrac{3}{12}).(\dfrac{2}{10}) = \dfrac{6}{120} = 0.05 \\ \\
+
+\noindent If I first draw from the \textbf{BOX 3} and then from \textbf{BOX 2}: \space
+P = (\dfrac{3}{12}).(\dfrac{4}{15}) = \dfrac{12}{180} = 0.066667 \\ \\
+
+\noindent If I first draw from the \textbf{BOX 3} and then again from \textbf{BOX 3}: \space
+P = (\dfrac{3}{12}).(\dfrac{2}{11}) = \dfrac{6}{132} = 0.04545 \\ \\ \\ 
+
+So, probability of getting two white balls is the highest in the case I draw one
+ball from \textbf{BOX 2} and one ball from \textbf{BOX 3}. \\
+
+\textbf{As seen above, order does not matter. } \\ \\
+Hence, First I would draw one ball from \textbf{BOX 2} and then draw one ball from
+\textbf{BOX 3}, or \textbf{vice versa} because order is not important.  \\ \\
+
+\noindent Answer: (\textbf{BOX 2}, \textbf{BOX 3}) or (\textbf{BOX 3}, \textbf{BOX 2})
+\newpage
+
+\section*{e)}
+Let random variable X be the number of white balls. \\ \\
+I will list the possibilities in such an order: \\
+For example; \\ \\
+WWB $\longrightarrow$ Write from BOX 1, Write from BOX 2, Black from BOX 3 \\ \\
+Support of X = \{0,1,2,3\} \\ \\
+
+\begin{center}
+    The Distribution of X
+\end{center} \\ 
+
+P\{X = 0\} = P\{BBB\} = (\dfrac{8}{10}).(\dfrac{11}{15}).(\dfrac{9}{12}) = \dfrac{792}{1800} \\ \\
+
+P\{X = 1\} = P\{WBB $\cup$  BWB $\cup$ BBW\} = (\dfrac{2}{10}).(\dfrac{11}{15}).(\dfrac{9}{12})+
+(\dfrac{8}{10}).(\dfrac{4}{15}).(\dfrac{9}{12})+
+(\dfrac{8}{10}).(\dfrac{11}{15}).(\dfrac{3}{12}) = \dfrac{750}{1800} \\ \\
+
+P\{X = 2\} = P\{BWW $\cup$ WBW $\cup$ WWB\} = 
+(\dfrac{8}{10}).(\dfrac{4}{15}).(\dfrac{3}{12})+
+(\dfrac{2}{10}).(\dfrac{11}{15}).(\dfrac{3}{12})+
+(\dfrac{2}{10}).(\dfrac{4}{15}).(\dfrac{9}{12}) = \dfrac{234}{1800} \\ \\
+
+P\{X = 3\} = P\{WWW\} = (\dfrac{2}{10}).(\dfrac{4}{15}).(\dfrac{3}{12}) = \dfrac{24}{1800} \\ \\
+
+\noindent Now, I will calculate expected value of X: \\ \\
+
+E(X) = (\dfrac{792}{1800}).0 (\dfrac{750}{1800}).1 + (\dfrac{234}{1800}).2 +
+(\dfrac{24}{1800}).3 = \dfrac{1290}{1800} = 0.716667 \\ \\ \\
+
+\noindent Answer = \textbf{0.716667} \newpage
+
+\section*{f)}
+We will compute a conditional probability: \\ \\
+
+Because we know that we get a white ball, total number of outcomes is equal to
+2 + 4 / 3 = 9. \\ \\
+
+Thw white ball we get can come from one of 2 white balls in BOX 1, so the number of
+favorable outcomes is equal to 2.  \\ \\
+
+\begin{center}
+    P &= $\dfrac{N_{Favorable}}{N_{Total}}$ = $\dfrac{2}{9}$
+\end{center}
+
+Hence, probability that this ball was taken from \textbf{BOX 1} is \textbf{\dfrac{2}{9}}. \\ \\ 
+
+
+\noindent Answer = \textbf{\dfrac{2}{9}}
+
+
+
+\newpage
+\section*{Answer 2}
+\section*{a)}
+S = \{Sam is corrupted.\} \\
+D = \{The ring is destroyed.\}
+\\ \\ It is given that, \\ \\ 
+\textbf{i)} P\{D $|$ \overline{S}\} = 0.9 \newline
+\textbf{ii)}P\{D | S\} = 0.5 \newline
+\textbf{iii)} P\{S\} = 0.1 \newline \newline 
+\textbf{By applying Complement Rule to iii)} \longrightarrow P\{\overline{S}\} = 1 - P\{S\} = 1 - 0.1 = 0.9 \\
+
+\noindent I am required to find P\{S $|$ D\}, which is the probability that Sam is corrupted given that the ring is destroyed. \newline
+
+\noindent Apply \textbf{Bayes Rule} and \textbf{Law of Total Probability}, \newline \newline
+\noindent
+P\{S $|$ D\} = \dfrac{P\{D | S\} . P\{S\}}{P\{D\}} = \dfrac{P\{D | S\} . P\{S\}}{P\{D | S)\} . P\{S\} + P\{D | \overline{S}\} . P\{\overline{S}\}} = \dfrac{(0.5) . (0.1)}{(0.5).(0.1) + (0.9).(0.9)} = 0.05813953488 \newline \newline
+\noindent Answer = \textbf{0.05813953488}
+
+\section*{b)}
+F = {Frodo is corrupted.} \\ \\ 
+It is given that, \\ \\
+\textbf{i)} P\{F\} = 0.25 \\
+\textbf{ii)} P\{D $|$ F\} = 0.2 \\
+\textbf{iii)} P\{D $|$ $\overline{S} \cap \overline{F}$\} = 0.9 \\
+\textbf{iv)} P\{D $|$ S \cap F \}  = 0.5 \\
+
+\noindent Because the corruption of Frodo and Sam are \textbf{independent events}, 
+$P\{S \cap F \}$ = P\{S\} . P\{F\} = (0.1) . (0.25) = 0.025 \\ 
+
+\noindent \textbf{By applying Complement Rule}, \\ \\
+P\{\overline{S \cap F}\} = 1 - P\{S \cap F\} = 1 - 0.025 = 0.975 \\
+P\{D | \overline{S \cap F \}} = 1 - P\{D | S \cap F \} = 1 - 0.05 = 0.95
+\newpage
+
+\noindent I am required to find $P\{S \cap F | D\}$ , which is the probability that both Frodo and Sam are corrupted given the ring is destroyed. \\ \\
+\noindent Apply \textbf{Bayes Rule} and \textbf{Law of Total Probability}, \newline \newline
+
+\noindent $P\{S \cap F | D\}$ = \dfrac{P\{D | S \cap F\} . P\{S \cap F \}}{P\{D\}}
+\dfrac{P\{D | S \cap F\} . P\{S \cap F \}}{P\{D | S \cap F\} . P\{S \cap F \} + 
+P\{D | \overline{S \cap F} \}.P\{\overline{S\cap F}\}} \\ = \dfrac{(0.05).(0.025)}{
+(0.05).(0.025) + (0.95).(0.075)} \newline \newline  = 0.0013477 \\ \\
+
+\noindent Answer = \textbf{0.0013477}
+
+
+
+\newpage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section*{Answer 3}
+\section*{a)}
+A = \{The number of snowy days in Ankara \} \\
+I = \{The number of snowy days in Istanbul \} \\
+
+\noindent It is given that in the table; \\
+Support of A = \{1,2,3\} \\ 
+Support of B = \{1,2\} \\ \\
+
+\noindent The event "there are 4 snowy days in total" consists of \\ 
+- "2 snowy days in Ankara and 2 snowy days in Istanbul" ,\\
+- "3 snowy days in Ankara and 1 snowy days in Istanbul" \\ \\ 
+
+\noindent P\{Four snowy days in total\} = P\{a = 2, i=2\} + P\{a = 3, i = 1\} = 0.2 + 0.12 = 0.32 \\ \\
+\noindent Hence, the probability that there are four snowy days in total is \textbf{0.32} \\ \\
+Answer = \textbf{0.32}
+
+\section*{b)}
+For snowy days in Ankara and Istanbul to be independent, \\ \\
+P\{A = a, I = i\} =  P\{A = a\} . P\{I = i\} \space \space \textbf{(1)}\\ must be satisfied for all a and i in supports of A and I, respectively.  If it is not satisfied, then this means they are dependent. \\ \\
+\noindent
+I will calculate marginal probabilities by using \textbf{Addition Rule} given in the textbook.
+\newline
+
+\noindent P\{A = 1\} = P\{A = 1,I = 1\} + P\{A = 1, I = 2\} = 0.18 + 0.12 = 0.30 \\
+P\{A = 2\} = P\{A = 2, I = 1\} + P\{A = 2, I = 2\} = 0.30 + 0.20 = 0.50 \\
+P\{A = 3\} = P\{A = 3, I = 1\} + P\{A = 3, I = 2\} = 0.12 + 0.08 = 0.20 \\
+
+\noindent P\{I = 1\} = P\{A = 1, I = 1\} + P\{A = 2, I = 1\} + P\{A = 3, I = 1\}  = 0.18 + 0.30 + 0.12 = 0.60 \\
+\noindent P\{I = 2\} = P\{A = 1, I = 2\} + P\{A = 2, I = 2\} + P\{A = 3, I = 2\}  = 0.12 + 0.2 + 0.08 = 0.40 \\ \\
+We have obtained, \\ \\
+\begin{tabularx}{0.4\textwidth}{ 
+  | >{\raggedright\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\raggedleft\arraybackslash}X | }
+ \hline
+  \textbf{a} & \textbf{P\{A = a\}}\\
+ \hline
+ 1  & 0.3\\
+  \hline
+ 2  & 0.5\\
+  \hline
+ 3  & 0.2\\
+\hline \space \space \space
+\end{tabularx} \space \space \space \space 
+\begin{tabularx}{0.4\textwidth} { 
+  | >{\raggedright\arraybackslash}X 
+  | >{\centering\arraybackslash}X 
+  | >{\raggedleft\arraybackslash}X | }
+ \hline
+  \textbf{i} & \textbf{P\{I = i\}}\\
+ \hline
+ 1  & 0.6\\
+  \hline
+ 2  & 0.4\\
+\hline
+\end{tabularx} \\ \\
+Table: Marginal Distribution of A \space \space \space \space \space \space \space \space \space \space \space \space \space \space Table: Marginal Distribution of I
+\newpage \noindent
+Now, we'll check for \textbf{(1)} \\ \\
+P\{A = 1, I = 1\} = 0.18 = P\{A = 1\} . P\{I = 1\} = (0.3).(0.6) = 0.18 \longrightarrow \space \space satisfied\\ \\
+P\{A = 1, I = 2\} = 0.12 = P\{A = 1\} . P\{I = 1\} = (0.3).(0.4) = 0.12 \longrightarrow \space \space satisfied\\ \\
+P\{A = 2, I = 1\} = 0.30 = P\{A = 1\} . P\{I = 1\} = (0.5).(0.6) = 0.30 \longrightarrow \space \space satisfied\\ \\
+P\{A = 2, I = 2\} = 0.20 = P\{A = 1\} . P\{I = 1\} = (0.5).(0.4) = 0.20 \longrightarrow \space \space satisfied\\ \\
+P\{A = 3, I = 1\} = 0.12 = P\{A = 1\} . P\{I = 1\} = (0.2).(0.6) = 0.12 \longrightarrow \space \space satisfied\\ \\
+P\{A = 3, I = 2\} = 0.08 = P\{A = 1\} . P\{I = 1\} = (0.2).(0.4) = 0.08 \longrightarrow \space \space satisfied\\ \\ \\
+
+\noindent As seen above, \textbf{(1)} has been satisfied for all a and i. Hence, the snowy days in Ankara, \textbf{A}, and the snowy days in Istanbul, \textbf{I}, are \textbf{independent}.
+
+\end{document}
+
+
