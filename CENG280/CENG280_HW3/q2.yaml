@@ -1,0 +1,66 @@
+name: q2
+source code: |
+  input: ''
+  blank: ' '
+
+  start state: q0
+
+  table:
+    q0:
+      0: {write: 0, R: q0}
+      1: {write: 1, R: q0}
+      ' ': {write: ' ', L: q1}
+
+      
+    q1:
+      0: {write: a, R: q2}
+      1: {write: b, R: q3}
+      ' ': {write: ' ', R: replace}
+      a: {write: a, L: q1}
+      b: {write: b, L: q1}
+
+    q2:
+      0: {write: 0, R: q2}
+      1: {write: 1, R: q2}
+      ' ': {write: a, L: q4}
+      a: {write: a, R: q2}
+      b: {write: b, R: q2}
+      
+    q3:
+      0: {write: 0, R: q3}
+      1: {write: 1, R: q3}
+      ' ': {write: b, L: q4}
+      a: {write: a, R: q3}
+      b: {write: b, R: q3}
+      
+    q4:
+      0: {write: 0, L: q5}
+      1: {write: 1, L: q5}
+      ' ': {write: ' ', L: q5}
+      a: {write: a, L: q5}
+      b: {write: b, L: q5}
+      
+    q5:
+      0: {write: 0, R: q1}
+      1: {write: 1, R: q1}
+      ' ': {write: ' ', R: q1}
+      a: {write: a, R: q1}
+      b: {write: b, R: q1}
+
+    replace:
+      ' ': {write: ' ', L: terminate}
+      a: {write: 0, R: replace}
+      b: {write: 1, R: replace}
+    
+    terminate:
+
+      
+positions:
+  q0: {x: 77.19, y: 239.52}
+  q1: {x: 249.19, y: 240.62}
+  q2: {x: 467.04, y: 104.32}
+  q3: {x: 454.03, y: 410.22}
+  q4: {x: 757.47, y: 246.35}
+  q5: {x: 461.88, y: 241.19}
+  replace: {x: 77.18, y: 377.09}
+  terminate: {x: 261.31, y: 431.56}
