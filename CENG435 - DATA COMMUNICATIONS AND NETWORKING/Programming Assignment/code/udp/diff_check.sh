@@ -1,0 +1,21 @@
+diff ./client_objects/small-0.obj ./server_objects/small-0.obj 
+diff ./client_objects/small-1.obj ./server_objects/small-1.obj 
+diff ./client_objects/small-2.obj ./server_objects/small-2.obj 
+diff ./client_objects/small-3.obj ./server_objects/small-3.obj 
+diff ./client_objects/small-4.obj ./server_objects/small-4.obj 
+diff ./client_objects/small-5.obj ./server_objects/small-5.obj 
+diff ./client_objects/small-6.obj ./server_objects/small-6.obj 
+diff ./client_objects/small-7.obj ./server_objects/small-7.obj 
+diff ./client_objects/small-8.obj ./server_objects/small-8.obj 
+diff ./client_objects/small-9.obj ./server_objects/small-9.obj 
+diff ./client_objects/large-0.obj ./server_objects/large-0.obj 
+diff ./client_objects/large-1.obj ./server_objects/large-1.obj 
+diff ./client_objects/large-2.obj ./server_objects/large-2.obj 
+diff ./client_objects/large-3.obj ./server_objects/large-3.obj 
+diff ./client_objects/large-4.obj ./server_objects/large-4.obj 
+diff ./client_objects/large-5.obj ./server_objects/large-5.obj 
+diff ./client_objects/large-6.obj ./server_objects/large-6.obj 
+diff ./client_objects/large-7.obj ./server_objects/large-7.obj 
+diff ./client_objects/large-8.obj ./server_objects/large-8.obj 
+diff ./client_objects/large-9.obj ./server_objects/large-9.obj 
+
