@@ -1,0 +1,24 @@
+#define PI_NUMBER 3.141592653589793238462643383279502884197
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include <cstring>
+#include <fstream>
+#include <cmath>
+
+#include "Scene.h"
+#include "Camera.h"
+#include "Color.h"
+#include "Mesh.h"
+#include "Rotation.h"
+#include "Scaling.h"
+#include "Translation.h"
+#include "Triangle.h"
+#include "Vec3.h"
+#include "tinyxml2.h"
+#include "Helpers.h"
+#include "Matrix4.h"
+bool facingBack(Vec4 &, Vec4 &, Vec4&);
+bool clippedLine(Scene *,Vec4 &, Vec4 &, Color &, Color &);
+void drawLine(Scene *, Vec4&, Vec4 &, Camera *);
+void triangleRaster(Scene *, Vec4 &, Vec4 &, Vec4 &, Camera *);
