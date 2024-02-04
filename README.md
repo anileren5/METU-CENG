@@ -1,2 +1,2 @@
 # METU-CENG
-Projects,THEs and Exams done @METU-CENG since 2020.
+Projects, THEs and Exams done at METU-CENG since 2020.
