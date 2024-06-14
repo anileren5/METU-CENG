@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  db:
+    build: ./db
+    container_name: db
+    ports:
+      - "27017:27017"
+
+  auth-service:
+    build: ./auth-service
+    container_name: auth-service
+    ports:
+      - "8001:8001"
+    depends_on:
+      - db
+  
+  user-info-service:
+    build: ./user-info-service
+    container_name: user-info-service
+    ports:
+      - "8002:8002"
+    depends_on:
+      - db
+  
+  expense-group-service:
+    build: ./expense-group-service
+    container_name: expense-group-service
+    ports:
+      - "8003:8003"
+    depends_on:
+      - db
+
+  expense-group-details-service:
+    build: ./expense-group-details-service
+    container_name: expense-group-details-service
+    ports:
+      - "8004:8004"
+    depends_on:
+      - db
+
+  frontend-service:
+    build: ./frontend-service
+    container_name: frontend-service
+    ports:
+      - "8080:8080"
+    depends_on:
+      - auth-service
+      - user-info-service
+      - expense-group-service
+      - expense-group-details-service
